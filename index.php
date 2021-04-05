@@ -1,36 +1,43 @@
 <?php
 
-class A {
-    
-}
+class A
+{
+    protected $x;
 
-class B extends A {
-    public function __construct($a) {
-        $this->a = $a;
+    public function line_equation($a, $b)
+    {
+        if ($a != 0) {
+            return $this->x = (-$b) / $a;
+        }
+        return null;
     }
-    protected $a;
 }
 
-class C extends B {
-    public function __construct($a, $b) {
-        $this->b = $b;
-        parent::__construct($a);
+class B extends A
+{
+    public function disclamer($a, $b, $c)
+    {
+        return ($b * $b) - 4 * $a * $c;
     }
-    protected $b;
+
+    public function quadratic_equation($a, $b, $c)
+    {
+        if ($a === 0) {
+            return parent::line_equation($b, $c);
+        }
+        $d = $this->disclamer($a, $b, $c);
+        if ($d > 0) {
+            $eg = sqrt($d);
+            return $this->x = array((-$b - $eg) / (2 * $a), (-$b + $eg) / (2 * $a));
+        }
+        if ($d === 0) {
+            return $this->x = array(-$b / (2 * $a));
+        }
+        return null;
+    }
 }
 
-$a1 = new A();
-$a2 = new A();
-$b3 = new B($a1);
-$b4 = new B($b3);
-$c5 = new C($b4, $a2);
-
-var_dump($c5);
-
-$c5 = new C( new B( new B( new A())), new A());
-
-echo "<br>";
-
-var_dump($c5);
-
-?>
+$aclass = new A();
+print_r($aclass->line_equation(4, 5));
+$bclass = new B();
+print_r($bclass->quadratic_equation(0, 6, 7));
