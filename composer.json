@@ -20,7 +20,7 @@
   },
   
   "require": {
-    "elistero/lab10library": "2.0"
+    "elistero/lab10library": "3.0"
   },
 
   "repositories": [

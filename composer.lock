@@ -4,18 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5dfbd0b50ea3e9fc436fb21cb182884a",
+    "content-hash": "a29e991e30ed3a7b62d1a9460b256927",
     "packages": [
         {
             "name": "elistero/lab10library",
-            "version": "1.0",
+            "version": "3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elistero/lab10library.git",
-                "reference": "bf3006e4c5e8773b617f4d17dff271c9e8224d0a"
+                "reference": "648eee482f9b9f79fe8ef9319894ae1a0bb44fc4"
             },
             "require": {
                 "rok9ru/trpo-core": "2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9"
             },
             "type": "library",
             "autoload": {
@@ -33,7 +36,7 @@
                 }
             ],
             "description": "lab10",
-            "time": "2021-04-11T21:16:29+00:00"
+            "time": "2021-04-11T21:57:15+00:00"
         },
         {
             "name": "rok9ru/trpo-core",
