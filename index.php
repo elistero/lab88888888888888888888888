@@ -1,21 +1,24 @@
-<?php
+﻿<?php
 
-use Krauskaite\MyLog;
-use Krauskaite\LoginovException;
-use Krauskaite\QuEquation;
+use Krauskeite\MyLog;
+use Krauskeite\QuEquation;
 
-include "core/core/EquationInterface.php";
+/*include "core/core/EquationInterface.php";
 include "core/core/LogAbstract.php";
 include "core/core/LogInterface.php";
-include "Krauskaite/MyLog.php";
-include "Krauskaite/Equation.php";
-include "Krauskaite/QuEquation.php";
-include "Krauskaite/Exception.php";
+include "Krauskeite/MyLog.php";
+include "Krauskeite/Equation.php";
+include "Krauskeite/QuEquation.php";
+include "Krauskeite/Exception.php";*/
+require_once __DIR__ . './vendor/autoload.php';
 
 ini_set("display_errors", 1);
 error_reporting(-1);
 
 try {
+	if(!is_dir("log")) {
+        mkdir("log", 0700);
+    }
     MyLog::log("Версия программы: " . trim(file_get_contents('version')) );
     $b = new QuEquation();
     $values = array();

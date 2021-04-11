@@ -1,0 +1,36 @@
+{
+  "name": "elistero/lab88888888888888888888888",
+  "description": "project",
+  "type": "project",
+  "license": "-",
+  "authors": [
+    {
+		"name": "Elizaveta",
+		"email": "elizaveta@gmail.com"
+    }
+  ],
+  
+
+  "minimum-stability": "dev",
+
+	"scripts": {
+    "post-install-cmd": [
+        "git symbolic-ref --short -q HEAD>version"
+    ]
+  },
+  
+  "require": {
+    "elistero/lab10library": "2.0"
+  },
+
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/rok9ru/trpo-core"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/elistero/lab10library.git"
+    }
+  ]
+}
